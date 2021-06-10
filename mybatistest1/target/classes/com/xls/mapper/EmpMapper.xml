@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="Emp">
+    <!--id一般是dao层方法名，resultType是实体类的返回值类型，写全限定名-->
+    <select id="findOne" resultType="emp">
+    select * from emp where empno = 7499
+  </select>
+    <!--返回多个对象list集合-->
+    <select id="findAll" resultType="emp">
+        select * from emp
+    </select>
+    <!--返回多个对象的Map集合-->
+    <select id="findEmpMap" resultType="map">
+        select * from emp
+    </select>
+</mapper>
